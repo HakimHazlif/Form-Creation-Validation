@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("registration-form");
   const feedbackDiv = document.getElementById("form-feedback");
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
 
     const username = document.getElementById("username").value.trim();
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       isValid = false;
       messages.push("Email must be a valid format (e.g., user@example.com).");
     }
-    if (username.length < 8) {
+    if (password.length < 8) {
       isValid = false;
       messages.push("Password must be at least 8 characters long.");
     }
